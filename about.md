@@ -1,6 +1,6 @@
 ---
 layout: page
-title: a Propos
+title: A Propos
 permalink: /about/
 ---
 Ce site a été créé dans le but de partager mes projets, mes expériences et mes passions.
