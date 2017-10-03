@@ -1,15 +1,15 @@
 ---
 layout: page
-title: About
+title: a Propos
 permalink: /about/
 ---
+Ce site a été créé dans le but de partager mes projets, mes expériences et mes passions.
+Mes sujets de prédilections sont principalement :
 
-Some information about you!
+- Les systèmes embarqués (Arduino, Raspberry Pi, STM8, STM32, etc...)
+- Le monde du libre
+- Les OS de types *NIX (BSD, Linux, etc...)
+- La programmation
+- L'électronique
+- La sécurité informatique
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
