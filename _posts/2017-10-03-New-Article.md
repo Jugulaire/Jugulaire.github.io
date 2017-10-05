@@ -3,7 +3,7 @@ layout: post
 title: Installation de Netdata sur Debian
 ---
 
-
+![netdata.png]({{ site.baseurl }}/images/gauge-img.jpg){:class="img-responsive"}
 
 Dans ce post, je vais détailler ma technique pour installer rapidement Netdata sur une machine Debian.
 
