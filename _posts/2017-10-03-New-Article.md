@@ -192,3 +192,14 @@ Voici une configuration permettant d'accéder a Netdata via un sous dossier (Mon
 }
 
 ```
+
+## Conclusion
+
+Comme vous le voyez, il devient trés simple de mettre en place un monitoring de sa machine sous linux grace au travaille du créateur de Netdata.
+
+Bien entendus il existe un moyen de faire son dashboard personalisé, d'ajouter ses propres plugins ou encore de monitorer plusieur machines depuis une seule instance de Netdata. 
+
+## Prochaine étape 
+
+- Crée notre propre plugin
+- Mettre en place un mode partagé pour monitorer plusieur machines depuis une instance de netdata
