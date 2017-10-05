@@ -3,7 +3,7 @@ layout: post
 title: Installation de Netdata sur Debian
 ---
 
-![netdata.png]({{ site.baseurl }}/images/netdata-img.png){:class="img-responsive"}
+![netdata.png]({{ site.baseurl }}/images/netdata-logo.png){:class="img-responsive"}
 
 Dans ce post, je vais détailler ma technique pour installer rapidement Netdata sur une machine Debian.
 
