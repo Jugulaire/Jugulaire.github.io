@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installation de Netdata sur Debian
+title: Monitoring Linux avec Netdata
 ---
 
 ![netdata.png]({{ site.baseurl }}/images/gauge-img.jpg){:class="img-responsive"}
