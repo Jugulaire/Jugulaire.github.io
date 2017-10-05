@@ -3,7 +3,7 @@ layout: post
 title: Monitoring Linux avec Netdata
 ---
 
-![netdata.png]({{ site.baseurl }}/images/gauge-img.jpg){:class="img-responsive"}
+![netdata.png]({{ site.baseurl }}/images/gaugeimage.jpg){:class="img-responsive"}
 
 Dans ce post, je vais détailler ma technique pour installer rapidement Netdata sur une machine Debian.
 
