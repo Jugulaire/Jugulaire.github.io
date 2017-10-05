@@ -124,7 +124,7 @@ Testons maintenant que tout fonctionne :
 ```bash
 user@yourmachine ~ $ echo "corp de mail" | mail -s "testing ssmtp setup" une.adresse@unDomaine.com
 ```
-##Paramétrage de netdata :
+## Paramétrage de netdata :
 
 ```bash 
 vi /etc/netdata/health_alarm_notify.conf
