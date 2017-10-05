@@ -51,7 +51,7 @@ service netdata start
 > Le monitoring est maintenant disponible sur ```http://localhost:19999```
 
 
-![netdata.png](images/netdata.png)
+![netdata.png]({{ site.baseurl }}/images/netdata.png)
 
 
 **TODO** Script d'installation pour Debian
