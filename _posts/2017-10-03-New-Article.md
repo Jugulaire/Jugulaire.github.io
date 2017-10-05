@@ -3,7 +3,7 @@ layout: post
 title: Installation de Netdata sur Debian
 ---
 
-# Netdata Howto
+Dans ce post, je vais détailler ma technique pour installer rapidement Netdata sur une machine Debian.
 
 ## Installation
 
@@ -51,7 +51,7 @@ service netdata start
 > Le monitoring est maintenant disponible sur ```http://localhost:19999```
 
 
-![netdata.png](../img/netdata.png)
+![netdata.png](https://github.com/Jugulaire/Documentation/blob/master/img/netdata.png)
 
 
 **TODO** Script d'installation pour Debian
