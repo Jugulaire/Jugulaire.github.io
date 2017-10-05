@@ -65,7 +65,8 @@ Cette partie se déroule en plusieurs parties :
 1. Installation et configuration de SSMTP
 2. Configuration des alertes dans netdata
 
-### 1 - 1 Installation de SSMTP
+### SSMTP
+SSMTP permet à des applications d'envoyer des courriels via la commande /usr/sbin/sendmail. Contrairement à postfix, il ne fait que rediriger les courriers vers un serveur SMTP externe. C'est donc un outil très léger et rapide, et qui ne demande que très peu de paramétrage.
 #### Installation (facile)
 Sur Debian, un paquet existe dans les dépots :
 ```bash
@@ -123,7 +124,7 @@ Testons maintenant que tout fonctionne :
 ```bash
 user@yourmachine ~ $ echo "corp de mail" | mail -s "testing ssmtp setup" une.adresse@unDomaine.com
 ```
-Place au paramétrage de netdata :
+##Paramétrage de netdata :
 
 ```bash 
 vi /etc/netdata/health_alarm_notify.conf
