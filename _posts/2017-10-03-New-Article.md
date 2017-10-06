@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Monitoring Linux avec Netdata
+title: Un monitoring Linux rapide avec Netdata !
 ---
 
 ![netdata.png]({{ site.baseurl }}/images/gaugeimage.jpg){:class="img-responsive"}
