@@ -10,8 +10,8 @@ Piwik est un logiciel libre et open source de mesure de statistiques web, succes
 ## [0x100] Pré-requis :
 
 1. Serveur web
-	1. Apache
-	2. Nginx
+  1. Apache
+  2. Nginx
 2. PHP 
 3. Mysql
 
