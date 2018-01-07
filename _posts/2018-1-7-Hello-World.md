@@ -138,7 +138,7 @@ On choisiras ici l'exploit dans sa version 2 car il est un peut ancien et plus f
 
 Voici un court script pour le faire compiler:
 
-```Bash
+```bash
 cp /usr/share/exploitdb/exploits/unix/remote/764.c ./exploit.c
 sed -i "s/unsigned\ char\ \*p\,\ \*end\;/const\ unsigned\ char\ \*p\,\ \*end\;/g" exploit.c
 sed -i -e '20i#include <openssl/rc4.h>\' exploit.c
