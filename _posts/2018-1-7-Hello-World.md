@@ -189,8 +189,8 @@ root@kali:~# ./OpenFuck | grep "1.3.20"
 ``` 
 Suite à un rapide trie on trouve deux **t0arget** intéressant :
 
-- 0x6a - RedHat Linux 7.2 (apache-1.3.20-16)1
-	0x6b - RedHat Linux 7.2 (apache-1.3.20-16)2
+- ``0x6a - RedHat Linux 7.2 (apache-1.3.20-16)1``
+- ``0x6b - RedHat Linux 7.2 (apache-1.3.20-16)2``
 
 Rappelez vous du résultat de nos scan, nous sommes ici sur un Apache 1.3.20 sous RedHat Linux !
 
