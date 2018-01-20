@@ -3,7 +3,7 @@ layout: post
 title: Le vrai sens du mot hacker
 ---
  
-![netdata.png]({{ site.baseurl }}/images/hackerman.png){:class="img-responsive"}
+![hackerman]({{ site.baseurl }}/images/hackerman.png){:class="img-responsive"}
 
 Quand on entend le mot **hack** dans les médias on pense souvent à un homme face à des lignes de code qui piratent ou détournent des systèmes informatiques mais qu'en est-il réellement ? 
 
