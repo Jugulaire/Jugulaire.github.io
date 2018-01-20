@@ -85,7 +85,7 @@ rabin2 -iz binaary50
 ```
 
 Un détail intéressant met en avant plusieurs chaînes de caractères parlant d'un mot de passe.
-Étant feignant on va ici écrire un script qui test chacune des chaînes trouvé avec rabin2 : 
+Étant feignant on va ici écrire un script qui teste chacune des chaînes trouvé avec rabin2 : 
 
 ```python
 #!/usr/bin/python3
@@ -112,7 +112,7 @@ echo -n "3cd50c6be9bbede06e51741928d88b7e" | sha256sum
 dad827e94c609b76424287f2523b2117475df29e4ca8475444a9976faedc00f7
 ```
 
-> Ici on ajoute `-n` pour supprimer le retour à la ligne que `echo` génère par génère.
+> Ici on ajoute `-n` pour supprimer le retour à la ligne que `echo` génère par défaut.
 
 Mais cette technique est trop simple !
 
