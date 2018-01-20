@@ -29,8 +29,6 @@ Laissez-moi vous dire que l'esprit du hacker est tout à fait similaire car, il 
 Ce terme se prête aujourd'hui plutôt au domaine de l'informatique c'est pour cela que nous n'évoquerons que ce dernier dans le reste de ce billet. 
 
 
-![hackerman]({{ site.baseurl }}/images/hackerman.png){:class="img-responsive"}
-
 ## Tous les hackers sont-ils des criminels ? 
 Bien entendus non ! On distingue plusieurs types de hackers les caractérisants en fonction de leurs intentions et de leurs agissements. 
 
