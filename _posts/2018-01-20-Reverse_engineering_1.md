@@ -2,8 +2,7 @@
 layout: post
 title: RE-001 Introduction au reverse engineering avec Radare2
 ---
-
-![radare2]({{ site.baseurl }}/images/r2logo3.png{:class="img-responsive"}
+![radare2]({{ site.baseurl }}/images/r2logo3.png){:class="img-responsive"}
 
 
 # Reverse enginering 
