@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [RE-001] Introduction au reverse engineering avec Radare2
+title: RE-001 Introduction au reverse engineering avec Radare2
 ---
 
 ![netdata.png]({{ site.baseurl }}/images/radare2-1000x450.jpg{:class="img-responsive"}
