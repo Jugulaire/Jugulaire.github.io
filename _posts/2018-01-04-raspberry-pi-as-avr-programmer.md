@@ -2,7 +2,6 @@
 layout: post
 title: Utiliser un Raspberry Pi pour programmer un AVR
 ---
-## Câblage
 
 ![]({{ site.baseurl }}/images/piATmega-500.jpg)
 
