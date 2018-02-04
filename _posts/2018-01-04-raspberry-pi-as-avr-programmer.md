@@ -4,7 +4,7 @@ title: Utiliser un Raspberry Pi pour programmer un AVR
 ---
 ## Câblage
 
-![](/home/jugu/Documents/piATmega-500.jpg)
+![]({{ site.baseurl }}/images/piATmega-500.jpg)
 
 ## Installation de avrdude
 
