@@ -1,3 +1,11 @@
+
+---
+layout: post
+title: Rickdiculously_Easy
+---
+
+![pwn]({{ site.baseurl }}/images/kiopitrix-1-1/pwn.jpeg){:class="img-responsive"}
+
 ## énumération 
 
 Avec Nmap on trouve ceci : 
