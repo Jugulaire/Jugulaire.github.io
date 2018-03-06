@@ -557,14 +557,3 @@ FLAG{Get off the high road Summer!} - 10 Points
 ```
 
 ** Neuvième FLAG 130/130**
-
-## Le mot de la fin 
-
-Voici un récapitulatif de la VM : 
-
-| Difficulté    | Temps passé     |
-| ------------- | --------------- |
-|  Débutant     |  4-5 heures     |
-
-Ici on travail surtout l'énumération car la majorité des FLAG se trouvent dans cette phase. 
-C'est donc idéal pour débuter dans le pentest. 
