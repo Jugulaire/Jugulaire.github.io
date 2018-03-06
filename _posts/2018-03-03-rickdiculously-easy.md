@@ -5,7 +5,7 @@ title: Rickdiculously Easy
 
 ![pwn]({{ site.baseurl }}/images/kiopitrix-1-1/pwn.jpeg){:class="img-responsive"}
 
-## énumération 
+## Énumération 
 
 Avec Nmap on trouve ceci : 
 ```bash
