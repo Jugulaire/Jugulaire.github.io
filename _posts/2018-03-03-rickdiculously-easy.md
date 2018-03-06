@@ -1,7 +1,6 @@
-
 ---
 layout: post
-title: Rickdiculously Easy
+title: Rickdiculously Easy 
 ---
 
 ![pwn]({{ site.baseurl }}/images/kiopitrix-1-1/pwn.jpeg){:class="img-responsive"}
