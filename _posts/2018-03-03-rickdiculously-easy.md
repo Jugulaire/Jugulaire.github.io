@@ -73,7 +73,7 @@ root@kali:~# nc -v 192.168.122.122 21838
 FLAG{Whoa this is unexpected} - 10 Points
 ```
 
-** Premier FLAG ! 10/130 points **
+*** Premier FLAG ! 10/130 points ***
 
 ## Port 13337 
 
@@ -88,7 +88,7 @@ FLAG:{TheyFoundMyBackDoorMorty}-10Points
 Connection closed by foreign host.
 ``` 
 
-** Deuxième FLAG 20/130 points **
+*** Deuxième FLAG 20/130 points ***
 
 ## Port 60000
 
@@ -106,7 +106,7 @@ FLAG.txt
 FLAG{Flip the pickle Morty!} - 10 Points
 ```
 
-** Troisième FLAG 30/130 points **
+*** Troisième FLAG 30/130 points ***
 
 ## Port 9090
 
@@ -116,7 +116,7 @@ En ouvrant un navigateur sur ce port on obtiens un flag :
 FLAG {There is no Zeus, in your face!} - 10 Points
 ```
 
-** Quatrième FLAG 40/130 **
+*** Quatrième FLAG 40/130 ***
 
 ## HTTP 
 
@@ -178,7 +178,7 @@ FLAG{Yeah d- just don't do it.} - 10 Points
 
 ```
 
-** Cinquième FLAG 50/130 **
+*** Cinquième FLAG 50/130 ***
 
 Si on ouvrais le fichier HTML ? 
 
@@ -343,7 +343,7 @@ FLAG{Get off the high road Summer!} - 10 Points
 
 ```
 
-** Sixième FLAG 60/130 **
+*** Sixième FLAG 60/130 ***
 
 On examine ensuite les autres dossier utilisateurs pour obtenir le maximum d'informations : 
 
@@ -430,7 +430,7 @@ Anyway. Here it is:
 FLAG: {131333} - 20 Points 
 ```
 
-** Septième FLAG 80/130 **
+*** Septième FLAG 80/130 ***
 
 On lit visiblement ici que Morty nous fournit un mot de passe pour un coffre-fort.
 Plus haut on à vus que dans le dossier home de Rick se trouve un dossier ```RICKS_SAFE``` :
@@ -498,7 +498,7 @@ Follow these clues, in order
 One of the words in my old bands name.  @
 ```
 
-** Huitième FLAG 100/130 **
+*** Huitième FLAG 100/130 ***
 
 On va donc ici générer un dictionnaire de mot de passe avec cruncher : 
 
@@ -556,4 +556,6 @@ On y est presque :
 FLAG{Get off the high road Summer!} - 10 Points
 ```
 
-** Neuvième FLAG 130/130**
+*** Neuvième FLAG 130/130 ***
+
+Nous voici en présence de tous les flags du challenge.
