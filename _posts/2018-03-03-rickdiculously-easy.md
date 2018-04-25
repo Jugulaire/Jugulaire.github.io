@@ -3,7 +3,7 @@ layout: post
 title: Rickdiculously Easy 
 ---
 
-![pwn]({{ site.baseurl }}/images/kiopitrix-1-1/pwn.jpeg){:class="img-responsive"}
+![pwn]({{ site.baseurl }}/images/kiopitrix-1-1/rick.jpg){:class="img-responsive"}
 
 ## Énumération 
 
