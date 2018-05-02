@@ -110,7 +110,7 @@ FLAG{Flip the pickle Morty!} - 10 Points
 
 ## Port 9090
 
-En ouvrant un navigateur sur ce port on obtiens un flag : 
+En ouvrant un navigateur sur ce port on obtient un flag : 
 
 ```bash
 FLAG {There is no Zeus, in your face!} - 10 Points
@@ -120,7 +120,7 @@ FLAG {There is no Zeus, in your face!} - 10 Points
 
 ## HTTP 
 
-Sur le port HTTP on va lancer dirb pour trouver d'éventuels indices ou pages cache :
+Sur le port HTTP on va lancer dIrb pour trouver d'éventuelles informations ou page cachées
 
 ```bash
 root@kali:~# dirb http://192.168.122.122/
@@ -159,7 +159,7 @@ On trouve ici de jolies choses :
 
 ### Passwords 
 
-Utilisons Lynx pour voir ce qui se trouve dans le dossier passwords (et si il est lisible) 
+Utilisons Lynx pour voir ce qui se trouve dans le dossier passwords (et s'il est lisible) 
 
 ```bash
                                        Index of /passwords
@@ -345,7 +345,7 @@ FLAG{Get off the high road Summer!} - 10 Points
 
 *** Sixième FLAG 60/130 ***
 
-On examine ensuite les autres dossier utilisateurs pour obtenir le maximum d'informations : 
+On examine ensuite les autres dossiers utilisateur pour obtenir le maximum d'informations : 
 
 ```bash
 /home/Morty:
@@ -381,7 +381,7 @@ drwxr-xr-x. 5 root   root    52 18 août   2017 ..
 ```
 
 Dans le dossier home de Morty, on trouve un fichier ```Safe_Password.jpg```. 
-En l'ouvrant on obtiens une simple image de Rick ; vraisemblablement de la stéganographie : 
+En l'ouvrant on obtient une simple image de Rick ; vraisemblablement de la stéganographie : 
 
 ```bash
 xxd Safe_Password.jpg | less 
@@ -415,7 +415,7 @@ xxd Safe_Password.jpg | less
 
 On trouve ainsi la phrase ``` The Safe Password: File: /home/Morty/journal.txt.zip. Password: Meeseek ```.
 
-Mettons ça de coté et allons voir ce fameux ```/home/Morty/journal.txt.zip``` :
+Mettons ça de côté et allons voir ce fameux ```/home/Morty/journal.txt.zip``` :
 
 ```bash
 root@kali:~/Téléchargements# unzip journal.txt.zip 
@@ -433,7 +433,7 @@ FLAG: {131333} - 20 Points
 *** Septième FLAG 80/130 ***
 
 On lit visiblement ici que Morty nous fournit un mot de passe pour un coffre-fort.
-Plus haut on à vus que dans le dossier home de Rick se trouve un dossier ```RICKS_SAFE``` :
+Plus haut on a vu que dans le dossier home de Rick se trouve un dossier ```RICKS_SAFE``` :
 
 ```bash
 [Summer@localhost ~]$ ls /home/RickSanchez/
@@ -523,7 +523,7 @@ root@kali:~# patator ssh_login host=192.168.122.122 port=22222 user=RickSanchez 
 11:18:17 patator    INFO - 0     19    0.165 | P7Curtains                         |  1198 | SSH-2.0-OpenSSH_7.5
 ```
 
-On à donc trouver le mot de passe de Rick **P7Curtains** :
+On a donc trouvé le mot de passe de Rick **P7Curtains** :
 
 ```bash
 [Summer@localhost ~]$ su RickSanchez
@@ -532,7 +532,7 @@ Mot de passe :
 RickSanchez
 ```
 
-On test si on à des droits sudo : 
+On test si on a des droits sudo : 
 
 ```bash
 [RickSanchez@localhost Summer]$ sudo -l
