@@ -33,7 +33,7 @@ pi@raspberrypi avrdude-6.2/~ $ make
 pi@raspberrypi avrdude-6.2/~ $ sudo make install
 ```
 
-On dois spécifier a avrdude quel GPIO utiliser :
+On doit spécifier a avrdude quel GPIO utiliser :
 
 ```
 pi@raspberrypi avrdude-6.2/~ $ sudo nano /usr/local/etc/avrdude.conf
@@ -131,9 +131,9 @@ Un dossier `build-uno` est créé à la compilation et contient un fichier `.hex
 pi@raspberrypi blink/~ $ sudo avrdude -c linuxgpio -p atmega8 -v -U flash:w:build-uno/blink.hex:i
 ```
 
-## Ajout de librairie : 
+## Ajout de librairies : 
 
-Ajouter ceci dans le Makefile pour ajouter des librairie :
+Ajouter ceci dans le Makefile pour ajouter des librairies :
 ```
 USER_LIB_PATH += /home/my_username/my_libraries_directory
 ARDUINO_LIBS += Wire \
@@ -143,7 +143,7 @@ ARDUINO_LIBS += Wire \
 
 # Troubleshoot :
 
-## Erreur GPIO
+## Erreur GPIO :
 ```
 Can't export GPIO 4, already exported/busy?: Device or resource busy
 ```
@@ -151,7 +151,10 @@ Can't export GPIO 4, already exported/busy?: Device or resource busy
 ```
 echo 4 > /sys/class/gpio/unexport 
 ```
-## Exemple de fuse 
+## Exemple de fuse :
+
+> ATTENTION :
+Une mauvaise manipulation de ces fuse peu rendre inutilisables vos µcontrolleur 
 
 ### Pour un atmega 48 en internal crystal 8mhz
 sudo avrdude -c linuxgpio -p atmega48 -U lfuse:w:0xe2:m -U hfuse:w:0xdf:m -U efuse:w:0xff:m
