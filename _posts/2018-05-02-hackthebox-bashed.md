@@ -93,7 +93,7 @@ On trouve donc des choses pas mal :
 
 Le dossier dev contient ceci :
 
-![bashed01](/home/jugu/Documents/Writeups/img/bashed01.png)
+![bashed01]({{ site.baseurl }}/images//bashed01.png)
 
 Si on se réfère au site web : 
 
@@ -103,7 +103,7 @@ Si on se réfère au site web :
 
 Voyons voir : 
 
-![bashed02](/home/jugu/Documents/Writeups/img/bashed02.png)
+![bashed02]({{ site.baseurl }}/images/bashed02.png)
 
 > Note : Nous avons le flag de l'utilisateur !!!
 
