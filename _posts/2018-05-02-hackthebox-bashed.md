@@ -24,7 +24,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 375.73 seconds
 ```
 
-##Dirb
+## Dirb
 
 On a donc seulement le port 80 d'ouvert, passons à dirb :
 
@@ -84,7 +84,7 @@ END_TIME: Thu Apr 26 20:44:58 2018
 DOWNLOADED: 9224 - FOUND: 3
 ```
 
-##Reconnaissance manuelle
+## Reconnaissance manuelle
 
 On trouve donc des choses pas mal : 
 
