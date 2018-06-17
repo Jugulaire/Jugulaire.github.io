@@ -66,6 +66,14 @@ programmer
   miso  = 9;
 ;
 ```
+On va ainsi suivre le câblage suivant :
+
+|  Raspberry   |  AVR   |
+| ------------ | ------ |
+|  GPIO 4      |   RST  |
+|  GPIO 10     |   D10  |
+|  GPIO 9      |   D12  |
+|  GPIO 11     |   D13  |
 
 ### Test 
 On va maintenant tester la communication : 
