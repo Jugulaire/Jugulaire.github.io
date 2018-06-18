@@ -68,7 +68,7 @@ programmer
 ```
 On va ainsi suivre le câblage suivant :
 
-|  Raspberry   |  AVR   |
+|  Raspberry --|--> AVR |
 | ------------ | ------ |
 |  GPIO 4      |   RST  |
 |  GPIO 10     |   D10  |
