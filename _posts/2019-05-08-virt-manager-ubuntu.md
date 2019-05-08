@@ -2,6 +2,9 @@
 layout: post
 title: Installation de virt-manager sous Ubuntu 18.04
 ---
+
+La version disponible dans les dépôts officiels de Ubuntu n'etant pas a jour, voici un moyen d'installer la version la plus récente de virt-manager :
+
 ![Virt-manager]({{ site.baseurl }}/images/Virt-manager.png){:class="img-responsive"}
 
 Installation des prérequis :
