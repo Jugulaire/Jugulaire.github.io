@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Le PCI passtrough avec Qemu et KVM  1/2 Installation
+title: Le PCI passtrough  KVM  1/2 Installation
 ---
 
 ![kvm.png]({{ site.baseurl }}/images/kvm.png){:class="img-responsive"}
