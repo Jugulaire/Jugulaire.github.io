@@ -1,9 +1,9 @@
 ---
 layout: post
-title: J'ai testé le PCI passtrough avec Qemu et KVM  1/2
+title: Le PCI passtrough avec Qemu et KVM  1/2 Installation
 ---
 
-![netdata.png]({{ site.baseurl }}/images/kvm.png){:class="img-responsive"}
+![kvm.png]({{ site.baseurl }}/images/kvm.png){:class="img-responsive"}
 
 ## Présentations 
 
@@ -11,7 +11,7 @@ Avant de me lancer dans une analyse plus technique du sujet, c'est quoi le PCI p
 
 ### C'est quoi 
 
-La virtualisation n'est pas nouvelle, elle permet de faire  n'importe quoi avec un ordinateur hôte qui accueil des machines virtuelles. Jusqu’à'a là rien de bien nouveau sous le soleil me direz-vous.
+La virtualisation n'est pas nouvelle, elle permet de faire  n'importe quoi avec un ordinateur hôte qui accueil des machines virtuelles. Jusqu’à là rien de bien nouveau sous le soleil me direz-vous.
 Il faut savoir que pour améliorer les performances des machines virtuelles, nos deux fabricants de CPU préférés ont développé des technologies tel que le VT-d ou encore AMD-vi. Elles permettent de déléguer une partie de la gestion des machines virtuelles directement dans le CPU et d'offrir un accès direct au matériel de l'hôte. 
 Avec ces technologies sont arrivés des possibilités bien plus intéressantes, le PCI passtrough en fait partie en permettant de présenter un périphérique PCI à une machine virtuelle. 
 Cette technique permet donc d'offrir des performances encore meilleures aux machines virtuelles en leur permettant par exemple de bénéficier de performances en calcul GPU. 
@@ -35,7 +35,7 @@ Primo, de quoi nous avons besoin pour faire tourner ce setup ?
 - Un ISO de Windows 10
 - Looking Glass ou Barrier (équivalent FOSS de synergy)
 - Un Ubuntu 18.04 tout propre 
-- KVM installe avec virt-manager 
+- KVM installé avec virt-manager 
 
   - ```
     sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager ovmf
@@ -359,6 +359,11 @@ sudo looking-glass-client -c 127.0.0.1 -w 1920 -b 1080 -M -m 72
 
 Pour prendre le focus de votre clavier et de votre souris, appuyez sur la touche `Pause attn`, appuyez à nouveau sur cette même touche pour sortir du focus.
 > Note : La résolution doit être configurée comme celle de votre écran physique
+
+## Conclusion 
+Bien que longue et semée d’embûches, le déploiement de la machine virtuelle s'est assez bien déroulé. 
+Pour la prochaine étape, je vais mettre en œuvre une série de tests visant à étudier les performances offertes par la solution. 
+Je détaillerais ensuite comment j'ai fais pour améliorer les performances de ma machine virtuelle. 
 
 
 ## Troubleshoot 
