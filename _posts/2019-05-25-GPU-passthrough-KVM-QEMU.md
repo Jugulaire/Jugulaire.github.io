@@ -220,7 +220,7 @@ Pour ma part, j'ai installé une VM avec les spécifications suivantes depuis vi
 - Réseau virtio 
 - Carte son AC 97 
 - Lecteur CD 1 Windows 10
-- Lecteur CD 2 Virtio.iso (https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso)
+- Lecteur CD 2 Virtio.iso ([https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso](Dispo ici))
 
 > Attention, ne pas déployer directement la carte graphique. 
 
@@ -371,7 +371,7 @@ Je détaillerais ensuite comment j'ai fais pour améliorer les performances de m
 - Error 127 : Reboot du système requis. Le périphérique s'est mal déconnecté de la machine virtuelle.
 - Error -22 : Activer le Vt-d dans le BIOS. Le Vt-d n'est pas forcément activé avec l'activation de la virtualisation CPU.
 - Error : IOMMU groups not viable : Installez le patch ACS override. 
-  - Télécharger les `.deb` ici : https://queuecumber.gitlab.io/linux-acs-override/
+  - Télécharger les `.deb` ici : [https://queuecumber.gitlab.io/linux-acs-override/](ACS patch)
     - Header 
     - image
   - Installer les header puis l'image 
@@ -390,41 +390,41 @@ Je détaillerais ensuite comment j'ai fais pour améliorer les performances de m
 
 ## Sources 
 
-https://heiko-sieger.info/running-windows-10-on-linux-using-kvm-with-vga-passthrough/
+[https://heiko-sieger.info/running-windows-10-on-linux-using-kvm-with-vga-passthrough/](GPU passtrough writeup)
 
-https://davidyat.es/2016/09/08/gpu-passthrough/
+[https://davidyat.es/2016/09/08/gpu-passthrough/](Another writeup about GPU passtrough)
 
-http://vfio.blogspot.com/2015/05/vfio-gpu-how-to-series-part-4-our-first.html
+[http://vfio.blogspot.com/2015/05/vfio-gpu-how-to-series-part-4-our-first.html](VFIO gpu writeup)
 
-https://github.com/saveriomiroddi/vga-passthrough/blob/master/3_BASIC_SETUP.mdhttps://github.com/saveriomiroddi/vga-passthrough/blob/master/3_BASIC_SETUP.md
+[https://github.com/saveriomiroddi/vga-passthrough/blob/master/3_BASIC_SETUP.mdhttps://github.com/saveriomiroddi/vga-passthrough/blob/master/3_BASIC_SETUP.md](Yet another writeup to install basic gpu passtrough)
 
-https://blog.zerosector.io/2018/07/28/kvm-qemu-windows-10-gpu-passthrough/
+[https://blog.zerosector.io/2018/07/28/kvm-qemu-windows-10-gpu-passthrough/](Finally, GPU passtrough with WIN10 writeup)
 
-https://forum.level1techs.com/t/pci-stub-wont-take-video-card/126311/2
+[https://forum.level1techs.com/t/pci-stub-wont-take-video-card/126311/2](Info about PCI-stub (Deprecated))
 
-https://www.reddit.com/r/VFIO/comments/8e7jk1/vfio_not_working_on_proxmox_51_official_iso/
+[https://www.reddit.com/r/VFIO/comments/8e7jk1/vfio_not_working_on_proxmox_51_official_iso/](Proxmox and VFIO problem)
 
-http://vfio.blogspot.com/2016/09/intel-iommu-enabled-it-doesnt-mean-what.html
+[http://vfio.blogspot.com/2016/09/intel-iommu-enabled-it-doesnt-mean-what.html](Intel IOMMU enable problem)
 
-http://vfio.blogspot.com/2014/08/vfiovga-faq.html
+[http://vfio.blogspot.com/2014/08/vfiovga-faq.html](FAQ about VGA passtrough)
 
-http://vfio.blogspot.com/2014/08/iommu-groups-inside-and-out.html
+[http://vfio.blogspot.com/2014/08/iommu-groups-inside-and-out.html](IOMMU problen with groups)
 
-https://forum.level1techs.com/t/two-gpu-in-the-same-iommu-group/130613
+[https://forum.level1techs.com/t/two-gpu-in-the-same-iommu-group/130613](Both GPU in same IOMMU groups)
 
-https://forum.level1techs.com/t/kernel-updates-on-18-04-acs-patch/129761/3
+[https://forum.level1techs.com/t/kernel-updates-on-18-04-acs-patch/129761/3](Howto install ACS patch)
 
-https://queuecumber.gitlab.io/linux-acs-override/
+[https://queuecumber.gitlab.io/linux-acs-override/](Patch ACS for kernel)
 
-https://unix.stackexchange.com/questions/478129/gpu-passthrough-works-with-uefi-firmware-but-not-windows-iso
+[https://unix.stackexchange.com/questions/478129/gpu-passthrough-works-with-uefi-firmware-but-not-windows-iso](UEFI and Windows problem)
 
-https://www.reddit.com/r/VFIO/comments/945xej/looking_glass_black_screen/
+[https://www.reddit.com/r/VFIO/comments/945xej/looking_glass_black_screen/](black screen in LookingGlass)
 
-https://github.com/gnif/LookingGlass/releases/tag/a12
+[https://github.com/gnif/LookingGlass/releases/tag/a12](LookingGlass Github)
 
-http://donewmouseaccel.blogspot.com/2010/03/markc-windows-7-mouse-acceleration-fix.html
+[http://donewmouseaccel.blogspot.com/2010/03/markc-windows-7-mouse-acceleration-fix.html](Remove mouse acceleration in Windows)
 
-https://heiko-sieger.info/tuning-vm-disk-performance/
+[https://heiko-sieger.info/tuning-vm-disk-performance/](VM disk performances)
 
-https://stackoverflow.com/questions/32193050/qemu-pulseaudio-and-bad-quality-of-sound
+[https://stackoverflow.com/questions/32193050/qemu-pulseaudio-and-bad-quality-of-sound](Bad sound quality)
 
