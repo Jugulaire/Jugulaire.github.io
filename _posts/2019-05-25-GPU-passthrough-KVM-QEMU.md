@@ -12,7 +12,7 @@ Avant de me lancer dans une analyse plus technique du sujet, c'est quoi le PCI p
 ### C'est quoi 
 
 La virtualisation n'est pas nouvelle, elle permet de faire  n'importe quoi avec un ordinateur hôte qui accueil des machines virtuelles. Jusqu’à là rien de bien nouveau sous le soleil me direz-vous.
-Il faut savoir que pour améliorer les performances des machines virtuelles, nos deux fabricants de CPU préférés ont développé des technologies tel que le VT-d ou encore AMD-vi. Elles permettent de déléguer une partie de la gestion des machines virtuelles directement dans le CPU et d'offrir un accès direct au matériel de l'hôte. 
+Il faut savoir que pour améliorer les performances des machines virtuelles, nos deux fabricants de CPU préférés ont développé des technologies tel que le VT-d ou encore AMD-vi. Elles permettent toutes deux de déléguer une partie de la gestion des machines virtuelles directement au CPU et d'offrir un accès direct au matériel de l'hôte. 
 Avec ces technologies sont arrivés des possibilités bien plus intéressantes, le PCI passtrough en fait partie en permettant de présenter un périphérique PCI à une machine virtuelle. 
 Cette technique permet donc d'offrir des performances encore meilleures aux machines virtuelles en leur permettant par exemple de bénéficier de performances en calcul GPU. 
 Nous sommes donc capables de lancer une petit GTA dans une machine virtuelle ou encore se dédier une machine virtuelle a des outils tel que Hashcat (pour casser des mots de passe). 
