@@ -56,7 +56,7 @@ Primo, de quoi nous avons besoin pour faire tourner ce setup ?
 - 2 SSD de 256 Go (1 pour l’hôte, l'autre pour la VM)
 - 1 HDD de 1 To
 - Une GTX 770 (GPU principale)
-- Une RX 460 (pour le VM)
+- Une RX 460 (pour la VM)
 
 ## Place au sport : le paramétrage de base
 
@@ -123,7 +123,7 @@ Maintenant, notons les identifiants entre crochet :
 - [1002:67ef]
 - [1002:aae0]
 
-### Ne pas charger de driver sur la carte réserve a la VM
+### Ne pas charger de driver sur la carte réservé a la VM
 
 Toute la subtilité du processus, c'est de ne pas donner le contrôle du matériel que l'on souhaite présenter a notre VM a la machine hôte. 
 
