@@ -26,7 +26,7 @@ Nmap done: 1 IP address (1 host up) scanned in 375.73 seconds
 
 ## Dirb
 
-On a donc seulement le port 80 d'ouvert, passons à dirb :
+Seul le port 80 est ouvert, passons à dirb :
 
 ```bash
 root@kali:~# dirb http://10.10.10.68
@@ -86,7 +86,7 @@ DOWNLOADED: 9224 - FOUND: 3
 
 ## Reconnaissance manuelle
 
-On trouve donc des choses pas mal : 
+Nous trouvons donc des choses pas mal : 
 
 - Le dossier dev
 - Le dossier uploads 
@@ -95,7 +95,7 @@ Le dossier dev contient ceci :
 
 ![bashed01]({{ site.baseurl }}/images//bashed01.png)
 
-Si on se réfère au site web : 
+En se référant au site web : 
 
 > phpbash helps a lot with pentesting. I have tested it on multiple different servers and it was very useful. I actually developed it on this exact server!
 >
@@ -151,13 +151,13 @@ drw-r-xr-x 10 root root 4096 Dec 4 12:43 ..
 -rwxrwxrwx 1 www-data www-data 1446 Apr 26 12:28 lol.php
 ```
 
-Maintenant on va lancer le reverse shell depuis le navigateur via l'url : 
+Maintenant lançons le reverse shell depuis le navigateur via l'url : 
 
 ```bash
 http://10.10.10.68/uploads/lol.php
 ```
 
-Puis on lance weevely sur kali : 
+Puis lançons weevely sur kali : 
 
 ```bash
 root@kali:~/bashed# weevely http://10.10.10.68/uploads/lol.php s3cr3t
@@ -208,7 +208,7 @@ drwxr-xr-x  12 root          root           4096 Dec  4 11:20 var
 lrwxrwxrwx   1 root          root             29 Dec  4 11:14 vmlinuz -> boot/vmlinuz-4.4.0-62-generic
 ```
 
-Comme on le voit, un dossier scripts appartenant à scriptmanager : 
+Comme nous le voyons, un dossier scripts appartenant à scriptmanager : 
 
 ```bash
 www-data@bashed:/var/www/html/uploads $ ls -l /scripts
