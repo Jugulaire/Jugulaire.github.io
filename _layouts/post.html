@@ -4,7 +4,7 @@ layout: default
 
 <article class="post">
   <h1>{{ page.title }}</h1>
-<a href="{{ site.baseurl }}" class="read-more">Retour</a>
+<a href="{{ site.url }}" class="read-more">Retour</a>
   <div class="entry">
     {{ content }}
   </div>
@@ -12,6 +12,6 @@ layout: default
   <div class="date">
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
- <a href="{{ site.baseurl }}" class="read-more">Retour</a>
+ <a href="{{ site.url }}" class="read-more">Retour</a>
   {% include disqus.html %}
 </article>
