@@ -3,32 +3,33 @@
 #
 
 # Name of your site (displayed in the header)
-name: Jugulaire
-
+#name: Jugulaire
+title: P0pR0cK5's Blog
 # Short bio or description (displayed in the header)
-description: ":(){ :|:& };:"
+description: "Pentest, Challenges, Tests and more ..."
+show_downloads: false
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars0.githubusercontent.com/u/13420167?v=4&s=40
+#avatar: https://avatars0.githubusercontent.com/u/13420167?v=4&s=40
 #
 # Flags below are optional
 #
 
 # Includes an icon in the footer for each username you enter
 footer-links:
-  dribbble:
-  email:
-  facebook:
-  flickr:
-  github: Jugulaire
-  instagram:
-  linkedin: julien-guerder-854a37111
-  pinterest:
-  rss: blabla# just type anything here for a working RSS icon
-  twitter:
-  stackoverflow: users/7931206/julien-guerder # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
-  googleplus: # anything in your profile username that comes after plus.google.com/
+#  dribbble:
+#  email:
+#  facebook:
+#  flickr:
+#  github: Jugulaire
+#  instagram:
+#  linkedin: julien-guerder-854a37111
+#  pinterest:
+#  rss: blabla# just type anything here for a working RSS icon
+#  twitter:
+#  stackoverflow: users/7931206/julien-guerder # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+#  youtube: # channel/<your_long_string> or user/<user-name>
+#  googleplus: # anything in your profile username that comes after plus.google.com/
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
@@ -83,5 +84,5 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
-
-theme: jekyll-theme-slate
+theme: jekyll-theme-hacker
+#theme: jekyll-theme-slate
