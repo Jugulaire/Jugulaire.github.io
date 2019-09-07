@@ -3,7 +3,7 @@ layout: post
 title: Utiliser un Raspberry Pi pour programmer un AVR
 ---
 
-![]({{ site.baseurl }}/images/raspberry.jpg)
+![]({{ site.baseurl }}/images/raspberry.png)
 
 ## Installation de avrdude
 
