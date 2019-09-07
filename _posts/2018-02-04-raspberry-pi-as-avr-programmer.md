@@ -3,7 +3,7 @@ layout: post
 title: Utiliser un Raspberry Pi pour programmer un AVR
 ---
 
-![]({{ site.baseurl }}/images/piATmega-500.jpg)
+![]({{ site.baseurl }}/images/raspberry.jpg)
 
 ## Installation de avrdude
 
@@ -68,7 +68,7 @@ programmer
 ```
 On va ainsi suivre le câblage suivant :
 
-|  Raspberry --|--> AVR |
+|  Raspberry   |    AVR |
 | ------------ | ------ |
 |  GPIO 4      |   RST  |
 |  GPIO 10     |   D10  |
