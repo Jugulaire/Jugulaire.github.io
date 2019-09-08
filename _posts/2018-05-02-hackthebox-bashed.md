@@ -3,7 +3,7 @@ layout: post
 title: Hackthebox Bashed 
 ---
 
-![pwn]({{ site.baseurl }}/images/HTB.png){:class="img-responsive"}
+![pwn]({{ site.baseurl }}/images/bashed.jpg){:class="img-responsive"}
 
 
 ## Nmap 
