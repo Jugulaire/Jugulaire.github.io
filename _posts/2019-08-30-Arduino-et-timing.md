@@ -3,7 +3,7 @@ layout: post
 title: Arduino et timing 
 ---
 
-![clock]({{ site.baseurl }}/images/clock.jpeg)
+![clock]({{ site.baseurl }}/images/clock.jpeg){:class="img-responsive"}
 
 
 
@@ -12,7 +12,7 @@ De plus nous aborderons différentes techniques pour manipuler les I/O de nos **
 
 ## Le matériel 
 
-  ![matos]({{ site.baseurl }}/images/matos.jpg)
+  ![matos]({{ site.baseurl }}/images/matos.jpg){:class="img-responsive"}
 
 Pour la partie **ATmega** : 
 
@@ -39,13 +39,13 @@ void loop() {
 Pour résumer, nous mettons la sortie numéro 13 (LED_BUILTIN) à l'état haut puis on la met à l'état bas directement.
 Observons ceci avec un oscilloscope :
 
-![IMAG000]({{ site.baseurl }}/images/IMAG000.BMP) 
+![IMAG000]({{ site.baseurl }}/images/IMAG000.BMP){:class="img-responsive"}
 
 Comme nous le voyons ici, un signal carré à une fréquence proche de **50 KHz** avec une période de **20µs** est généré par le microcontrôleur. 
 
 Faisons de même avec **l'ATmega328 à 16 MHz** :
 
-![IMAG004]({{ site.baseurl }}/images/imag004.bmp)
+![IMAG004]({{ site.baseurl }}/images/imag004.bmp){:class="img-responsive"}
 
 Comme nous pouvons le constater,  un signal carré avec une fréquence proche de **145 KHz** avec une période de **6.87µs** est cette fois généré.
 
@@ -82,7 +82,7 @@ digitalWrite(12, LOW);
 ```
 Et voilà le signal :
 
-  ![IMAG004]({{ site.baseurl }}/images/IMAG004.BMP)
+  ![IMAG004]({{ site.baseurl }}/images/IMAG004.BMP){:class="img-responsive"}
 
 Nous constatons ici que la sortie 12 (en jaune) est décalé d'un quart de période par rapport a la sortie 13 soit de **10µs**. Notons également que la fréquence est passée de **50 Khz** a **25 Khz** avec une période de **40 µs**. 
 
@@ -116,7 +116,7 @@ void digitalWrite(uint8_t pin, uint8_t val)
  }
  SREG = oldSREG;
  }
- ```
+```
 
 Dans la première partie du code, la fonction **digitalPinToBitMask** convertis le numéro de pin envoyé en masque pour les différents ports de l'ATmega.
 
@@ -157,7 +157,7 @@ Chaque port possède 3 registres sur 8 bits :
 
 Voici ce que donne notre code sous forme de graphique :
 
-![IMAG005]({{ site.baseurl }}/images/IMAG005.BMP)
+![IMAG005]({{ site.baseurl }}/images/IMAG005.BMP){:class="img-responsive"}
 
 > J'ai affiché la courbe jaune inversé pour que nous puissions observer le timming plus facilement et parce que c'est classe.
 
@@ -166,7 +166,7 @@ Avec les ports, nous avons directement demandé a notre ATmega d'allumer la sort
 Étant donné que cette action ne demande qu'une seule instruction plutôt que deux, elle raccourcit le temps d’exécution mais aussi la taille du code. 
 
 Il est également important de préciser que cette technique n'est pas recommandé par la documentation officielle Arduino car elle rend le code moins lisible. 
- 
+
 # Conclusion 
 
 Par le présent ticket, j'ai appris plusieurs choses assez intéressantes sur les ATmega et leur fonctionnement. 
