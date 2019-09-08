@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Freecad : Découper un assemblage de pièces  
+title: Freecad - Découper un fichier STL 
 ---
 
 ![freecad]({{ site.baseurl }}/images/freecad.jpeg){:class="img-responsive"}
