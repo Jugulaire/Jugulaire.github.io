@@ -241,7 +241,7 @@ root@kali:~/rop_emporium/split# ROPgadget --binary split | grep "rdi"
 ~~~
 
 Nous allons ici utiliser la fonction `system` pour appeler la string `/bin/cat flag.txt`. 
-Pour ce faire, nous devons mettre la chaîne `/bin/cat flag.txt`dans le registre `rdi`. 
+Pour ce faire, nous devons mettre la chaîne `/bin/cat flag.txt` dans le registre `rdi`. 
 Pourquoi `rdi` ? simplement parce qu'il s'agit du registre contenant le premier argument d'une fonction (cf ma cheat sheet).
 
 Voici une représentation de la pile souhaitée : 
@@ -353,7 +353,7 @@ root@kali:~/rop_emporium/split# python exploit.py
 
 ## callme
 
-Dans ce challenge nous devons appeler les fonctions callme_one(), callme_two() et callme_three() dans l'ordre exact. 
+Dans ce challenge nous devons appeler les fonctions `callme_one()` , `callme_two()` et `callme_three()` dans l'ordre exact. 
 Ces fonctions doivent être appelé avec le paramètre 1,2,3 (par exemple callme_one(1,2,3)..).
 
 Pour cela, nous allons devoir utiliser les registres suivants pour passer les paramètres : 
@@ -523,7 +523,7 @@ Num  Vaddr       Bind      Type Name
    7 0x00000000    WEAK  NOTYPE __gmon_start__
 ~~~
 
-Nous allons donc appeler `system`avec l'adresse `0x004005e0`.
+Nous allons donc appeler `system` avec l'adresse `0x004005e0`.
 
 ~~~bash
 root@kali:~/rop_emporium/write4# ROPgadget --binary write4 | grep "pop rdi"
