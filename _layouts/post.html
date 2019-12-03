@@ -18,4 +18,7 @@ layout: default
   <br>
  <a href="{{ site.url }}" class="read-more">Retour</a>
   {% include disqus.html %}
+  {% if page.mermaid %}
+  {% include mermaid.html %}
+  {% endif %}
 </article>
