@@ -5,7 +5,7 @@ tags: [Mermaid]
 mermaid: true
 ---
 
-![Writeup]({{ site.baseurl }}/images/haystack.jpg){:class="img-responsive"}
+![Writeup]({{ site.baseurl }}/images/relai.jpg){:class="img-responsive"}
 
 Suite à la finalisation de ma première attaque sur un domaine Active Directory utilisant ntlmrelay.py, je souhaitais en apprendre davantage sur le fonctionnement des attaques de type relais NTLM. 
 
