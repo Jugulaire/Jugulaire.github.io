@@ -66,7 +66,7 @@ Voici une explication rapide des 3 étapes qui composent une authentification NT
 
 <div class="mermaid">
 graph LR;
-client--Demmande connexion + protocoles supportés-->serveur;
+client--Demande connexion + protocoles supportés-->serveur;
 </div>
 
 - Type 2 : Le serveur envoie son challenge au client pour qu'il le résolve avec son mot de passe 
