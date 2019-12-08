@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Le PCI passtrough  KVM  1/2 Installation
+title: Le PCI passtrough  KVM, Installation
 ---
 
 ![kvm.png]({{ site.baseurl }}/images/kvm.png){:class="img-responsive"}
@@ -361,9 +361,9 @@ Pour prendre le focus de votre clavier et de votre souris, appuyez sur la touche
 > Note : La résolution doit être configurée comme celle de votre écran physique
 
 ## Conclusion 
-Bien que longue et semée d’embûches, le déploiement de la machine virtuelle s'est assez bien déroulé. 
+Bien que longue et semée d’embûches, l'installation de la machine virtuelle s'est assez bien déroulé. 
 Pour la prochaine étape, je vais mettre en œuvre une série de tests visant à étudier les performances offertes par la solution. 
-Je détaillerais ensuite comment j'ai fais pour améliorer les performances de ma machine virtuelle. 
+Je détaillerais ensuite comment j'ai fais pour améliorer les performances de ma machine virtuelle (si je trouve le temps de le faire). 
 
 
 ## Troubleshoot 
