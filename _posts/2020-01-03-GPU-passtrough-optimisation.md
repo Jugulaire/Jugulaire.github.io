@@ -5,9 +5,9 @@ tags: [Mermaid]
 mermaid: true
 ---
 
-![gauge]({{ site.baseurl }}/images/gauge_kvm.jpg){:class="img-responsive"}
+![gauge_kvm]({{ site.baseurl }}/images/gauge_kvm.jpg){:class="img-responsive"}
 
-# Le PCI passtrough  KVM, optimisation 
+
 
 Lors d'un précédent billet j'avais évoqué l'installation d'un VM en mode PCI passtrough. Néanmoins, il manque une partie assez importante à détailler ; l'optimisation. 
 
