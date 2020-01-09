@@ -9,7 +9,7 @@ mermaid: true
 
 
 
-Lors d'un précédent billet j'avais évoqué l'installation d'un VM en mode PCI passtrough. Néanmoins, il manque une partie assez importante à détailler ; l'optimisation. 
+Lors d'un précédent billet j'avais évoqué l'installation d'une VM en mode PCI passtrough. Néanmoins, il manque une partie assez importante à détailler ; l'optimisation. 
 
 Dans ce billet, je vais donc détailler les différentes techniques d'optimisation que j'ai mise en œuvre sur mon passtrough. 
 
@@ -17,7 +17,7 @@ Dans ce billet, je vais donc détailler les différentes techniques d'optimisati
 
 ### Explication 
 
-> Attention, les explication données ici peuvent être erroné. Elle regroupe les recherches que j'ai effectués sur le sujet. 
+> Attention, les explications données ici peuvent être erroné. Elle regroupe les recherches que j'ai effectuées sur le sujet. 
 
 Les CPU modernes (ou plutôt relativement modernes) offrent un technologie appelé SMT (Simultaneous Multi Threading). Le principe est simple, utiliser un coeur CPU pour gérer deux thread en passant d'un thread à l'autre de maniéré plus ou moins efficiente. 
 
@@ -27,11 +27,11 @@ Alors tout ça c'est cool, mais pas pour notre machine virtuelle car KVM créé 
 
 Un ordonnanceur de tâche définis quel tâche pourra accéder au cœurs CPU mais également sur quel cœur CPU elle sera exécuté. Il tiendra pour cela compte de l'utilisation du cœur et de l'importance du processus.
 
-L’ordonnanceur de tâche c'est en gros comme un queue à la caisse d'un super-marché, vous avez des personnes qui représentent les tâches et les caisse qui représente les cœurs. Vous avez des caisses moins de 10 articles, d'autre réservés aux personnes a mobilité réduite ou encore des caisses classiques. L'objectif est de répartir chaque personne en fonction de critères donné juste avant. En tant que client, si une file semble plus courte vous allez passer d'une caisse à l'autre. Mais imaginez que cette caisse soit réservé aux personne à mobilité réduite, si une personne en fauteuil roulant arrive, vous devez lui céder la place (et vous allez perdre du temps). 
+L’ordonnanceur de tâche c'est en gros comme une queue à la caisse d'un super-marché, vous avez des personnes qui représentent les tâches et les caisses qui représente les cœurs. Vous avez des caisses moins de 10 articles, d'autre réservés aux personnes a mobilité réduite ou encore des caisses classiques. L'objectif est de répartir chaque personne en fonction de critères donné juste avant. En tant que client, si une file semble plus courte vous allez passer d'une caisse à l'autre. Mais imaginez que cette caisse soit réservée aux personne à mobilité réduite, si une personne en fauteuil roulant arrive, vous devez lui céder la place (et vous allez perdre du temps). 
 
-Pour notre machine virtuelle c'est la même chose, chacun des processus de nos cœurs virtuels doivent se battre avec ceux de la machine hôte pour accéder au cœurs CPU physique. Il y a alors de l'attente et donc des latences d'accès car d’autre processus prioritaires passent en premiers dans l’ordonnancement des tâches. 
+Pour notre machine virtuelle c'est la même chose, chacun des processus de nos cœurs virtuels doivent se battre avec ceux de la machine hôte pour accéder au cœurs CPU physiques. Il y a alors de l'attente et donc des latences d'accès car d’autre processus prioritaires passent en premiers dans l’ordonnancement des tâches. 
 
-Ces latences sont encore aggravés de par l'architecture des CPU. Généralement, un CPU multi-cœur possède des caches L1/L2 par cœurs mais partagent le cache L3. Cela signifie que si l'un de nos processus passe du cœur physique 1 vers le cœur physique 3, il perdra par la même occasion son cache L1/L2. Rappelons que ces caches existent pour optimiser les performances d’exécution des tâches. 
+Ces latences sont encore aggravées de par l'architecture des CPU. Généralement, un CPU multi-cœur possède des caches L1/L2 par cœurs mais partagent le cache L3. Cela signifie que si l'un de nos processus passe du cœur physique 1 vers le cœur physique 3, il perdra par la même occasion son cache L1/L2. Rappelons que ces caches existent pour optimiser les performances d’exécution des tâches. 
 
 ### Application
 
@@ -68,7 +68,7 @@ Bien entendus, chaque stratégie de pinning offre des avantages et des inconvén
 
 ## Optimiser Windows
 
-Un autre gros morceaux est l'optimisation se situe dans Windows en lui-même. Dans mon cas, ces optimisation permettent surtout d'augmenter la fiabilité de votre OS virtualisé. Voyons voir de quoi il s'agit :
+Un autre gros morceau est l'optimisation se situe dans Windows en lui-même. Dans mon cas, ces optimisations permettent surtout d'augmenter la fiabilité de votre OS virtualisé. Voyons voir de quoi il s'agit :
 
 ### Corriger l'erreur 127 sur les GPU AMD 
 
@@ -82,7 +82,7 @@ Néanmoins, dans le cas d'une machine virtuelle, une fois la VM arrêté le GPU 
 
 #### L'application
 
-Il existe néanmoins une solution se basant sur l'outil Windows Device Console utilisé dans le développement de drivers pour envoyé des signaux au périphériques. 
+Il existe néanmoins une solution se basant sur l'outil Windows Device Console utilisé dans le développement de drivers pour envoyé des signaux aux périphériques. 
 
 Nous allons ici utilisé chocolatey pour installer cet outil, collez simplement ceci dans une console powershell administrateur pour l'installer : 
 
@@ -102,7 +102,7 @@ Cet outil est très simple d'utilisation :
 devcon64.exe enable|disable "<device_id>"
 ```
 
-Il nous faut maintenant le device ID disponible dans le gestionnaire de péripherique. Faites un clic droit sur la carte graphique, propriétés, details :
+Il nous faut maintenant le device ID disponible dans le gestionnaire de péripheriques. Faites un clic droit sur la carte graphique, propriétés, details :
 
 ![127_err_gpu]({{ site.baseurl }}/images/127_err_gpu.png){:class="img-responsive"}
 
@@ -110,7 +110,7 @@ Faire de même pour la partie audio :
 
 ![127_err_gpu-2]({{ site.baseurl }}/images/127_err_gpu-2.png){:class="img-responsive"}
 
-Je crée ensuite deux script batch pour activer le GPU :
+Je crée ensuite deux scripts batch pour activer le GPU :
 
 ```bash
 devcon64.exe enable "PCI\VEN_1002&DEV_67EF*"
@@ -126,7 +126,7 @@ devcon64.exe disable "PCI\VEN_1002&DEV_67EF*"
 devcon64.exe disable "HDAUDIO\FUNC_01&VEN_1002&DEV_AA01*"
 ```
 
-Maintenant nous allons déployer une GPO locale pour lancer nos script au démarrage et à l’arrêt :
+Maintenant nous allons déployer une GPO locale pour lancer nos scripts au démarrage et à l’arrêt :
 
 ```bash
 gpedit.msc
@@ -142,14 +142,14 @@ C'est terminé !
 
 ### Désactiver fast startup et sleep mode :
 
-Ces fonctionnalités peut rendre votre OS instable voir même faire planter l'hôte. Voici un one-liner pour le couper : 
+Ces fonctionnalités peuvent rendre votre OS instable voire même faire planter l'hôte. Voici un one-liner pour le couper : 
 
 ```bash
 REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /V HiberbootEnabled /T REG_dWORD /D 0 /F
 powercfg.exe /h off 
 ```
 
-### Activer les optimisation Hyper-V
+### Activer les optimisations Hyper-V
 
 Bien qu’étonnante, cette fonctionnalité permet de profiter des optimisations d'hyper-v sur KVM :
 
@@ -160,7 +160,7 @@ sudo virt-xml $VMNAME --edit --clock hypervclock_present=yes
 
 ## Conclusion 
 
-Comme vous le voyez, mettre en place et optimiser une machine virtuelle avec du GPU passtrough n'est pas forcément simple. Néanmoins, j'ai appris énormément sur le fonctionnement des différentes parties d'un ordinateur. Il existe bien entendus d'autres techniques pour optimiser les performances comme l'isolation CPU qui permet de demandé au kernel de ne pas utilisé du tout certains CPU pour les dédier a notre VM. Mais, je souhaite profiter des performances de ma workstation Linux pleinement quand je n'exploite pas ma VM c'est pourquoi j'ai décider de ne pas utiliser l'option isolcpu. 
+Comme vous le voyez, mettre en place et optimiser une machine virtuelle avec du GPU passtrough n'est pas forcément simple. Néanmoins, j'ai appris énormément sur le fonctionnement des différentes parties d'un ordinateur. Il existe bien entendus d'autres techniques pour optimiser les performances comme l'isolation CPU qui permet de demander au kernel de ne pas utiliser du tout certains CPU pour les dédier a notre VM. Mais, je souhaite profiter des performances de ma workstation Linux pleinement quand je n'exploite pas ma VM c'est pourquoi j'ai décidé de ne pas utiliser l'option isolcpu. 
 
 >  J'ai gagné autour de 25 à 30 fps en jeu avec ces optimisations. 
 
