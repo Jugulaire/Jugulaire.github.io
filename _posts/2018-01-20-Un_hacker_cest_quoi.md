@@ -31,7 +31,7 @@ Ce terme se prête aujourd'hui plutôt au domaine de l'informatique c'est pour c
 ## Tous les hackers sont-ils des criminels ?
 Bien entendus non ! On distingue plusieurs types de hackers les caractérisants en fonction de leurs intentions et de leurs agissements.
 
-Le script kiddle est une personne non initiée qui se lance dans le hacking en utilisant le travail des autres comme base. Sans avoir les connaissances techniques pour comprendre exactement ce qu'il fait et est donc mal apprécié des hackers.
+Le script kiddie est une personne non initiée qui se lance dans le hacking en utilisant le travail des autres comme base. Sans avoir les connaissances techniques pour comprendre exactement ce qu'il fait et est donc mal apprécié des hackers.
 
 Le white hat est un hacker qui va étudier et éventuellement trouver des failles de sécurité dans un système. Plutôt que de les exploiter pour son propre compte, il les signalera dans le but d'améliorer la sécurité. Il est ainsi plutôt bénéfique et aide les systèmes à s'améliorer.
 
@@ -45,7 +45,7 @@ Il existe bien d'autres variantes plus ou moins nuancées à ces catégories mai
 
 Le hacker, c'est une personne qui représente avant tout un savoir-faire mais, également une idée de révolution.
 
-Les Anonymous, les shadow brockers, Aaron Swartz ou encore Edward Snowden représentent ainsi une liste de personnes qui chaque jour militepour défendre des causes aussi larges que l'espionnage de masse, la protection de la vie privée ou encore la libre circulation du savoir.
+Les Anonymous, les shadow brockers, Aaron Swartz ou encore Edward Snowden représentent ainsi une liste de personnes qui chaque jour militent pour défendre des causes aussi larges que l'espionnage de masse, la protection de la vie privée ou encore la libre circulation du savoir.
 Les deux exemples les plus parlants sont Edward Snowden et Aaron Swartz.
 
 *Edward Snowden* est un ancien analyste de la NSA qui, choqué par ce qu'il a appris, décide de divulguer des informations alors classé secret/défense sur les agissements de l'institution Américaine.
