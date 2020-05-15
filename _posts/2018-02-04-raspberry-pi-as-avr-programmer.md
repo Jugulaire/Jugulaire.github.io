@@ -6,8 +6,7 @@ title: Utiliser un Raspberry Pi pour programmer un AVR
 ![]({{ site.baseurl }}/images/pizer0_avr.jpg)
 
 ## Installation de avrdude
-
-Une fois votre AVR connecté nous allons installer avrdude : 
+Nous allons installer avrdude : 
 
 ### Prérequis 
 
