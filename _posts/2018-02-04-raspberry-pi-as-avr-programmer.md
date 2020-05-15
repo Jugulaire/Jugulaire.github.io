@@ -7,7 +7,7 @@ title: Utiliser un Raspberry Pi pour programmer un AVR
 
 ## Installation de avrdude
 
-Une fois votre AVR connecté on va pouvoir installer avrdude : 
+Une fois votre AVR connecté nous allons installer avrdude : 
 
 ### Prérequis 
 
@@ -17,7 +17,7 @@ pi@raspberrypi ~ $ sudo apt-get install bison flex -y
 ```
 
 ### Installation 
-On installe avrdude depuis les sources :
+Depuis les sources :
 
 ```bash
 pi@raspberrypi ~ $ wget http://download.savannah.gnu.org/releases/avrdude/avrdude-6.2.tar.gz
@@ -25,7 +25,7 @@ pi@raspberrypi ~ $ tar xfv avrdude-6.2.tar.gz
 pi@raspberrypi ~ $ cd avrdude-6.2/
 ```
 
-On active `linuxgpio` dans les sources de avrdude puis on l'installe :
+Activer `linuxgpio` dans les sources de avrdude et installation :
 
 ```bash
 pi@raspberrypi avrdude-6.2/~ $ ./configure – -enable-linuxgpio
@@ -33,13 +33,13 @@ pi@raspberrypi avrdude-6.2/~ $ make
 pi@raspberrypi avrdude-6.2/~ $ sudo make install
 ```
 
-On doit spécifier a avrdude quel GPIO utiliser :
+Spécifier à avrdude quel GPIO utiliser :
 
 ```bash
-pi@raspberrypi avrdude-6.2/~ $ sudo nano /usr/local/etc/avrdude.conf
+pi@raspberrypi avrdude-6.2/~ $ sudo vi /usr/local/etc/avrdude.conf
 ```
 
-On va chercher `linuxgpio` : 
+Rechercher `linuxgpio` : 
 
 ```ini
 #programmer
@@ -53,7 +53,7 @@ On va chercher `linuxgpio` :
 #;
 ```
 
-Et on le remplace par :
+Et le remplacer par ceci :
 
 ```ini
 programmer
@@ -66,26 +66,48 @@ programmer
   miso  = 9;
 ;
 ```
-On va ainsi suivre le câblage suivant :
+Voici le câblage :
 
-|  Raspberry   |    AVR |
-| ------------ | ------ |
-|  GPIO 4      |   RST  |
-|  GPIO 10     |   D11  |
-|  GPIO 9      |   D12  |
-|  GPIO 11     |   D13  |
+|  Raspberry   |    Arduino | AVR |
+| ------------ | ---------- | --- |
+|  GPIO 4      |   RST      | 1   |
+|  GPIO 10     |   D11      | 18  |
+|  GPIO 9      |   D12      | 17  |
+|  GPIO 11     |   D13      | 19  |
 
 ### Test 
 
-On va maintenant tester la communication : 
+Testons la communication : 
 
 ```bash
-sudo avrdude -c linuxgpio -p atmega8 -v 
+sudo avrdude -c linuxgpio -p m8 -v 
 ```
-
 **-c** Type de programmateur
 **-p** Modèle de puce 
 **-v** Mode verbeux 
+
+Je me suis trompé de modéle d'aTmega :
+
+```bash
+avrdude: Device signature = 0x1e9205 (probably m48)
+avrdude: Expected signature for ATmega8 is 1E 93 07
+         Double check chip, or use -F to override this check.
+```
+
+Changeons le modéle comme l'indique AVR dude :
+
+```bash
+sudo avrdude -c linuxgpio -p m48 -v
+avrdude: Device signature = 0x1e9205 (probably m48)
+avrdude: safemode: hfuse reads as DF
+avrdude: safemode: efuse reads as FF
+
+avrdude: safemode: hfuse reads as DF
+avrdude: safemode: efuse reads as FF
+avrdude: safemode: Fuses OK (E:FF, H:DF, L:E2)
+
+avrdude done.  Thank you.
+```
 
 ## Premier programme 
 
@@ -95,7 +117,7 @@ Il est tout à fait possible de programmer un AVR ou même un Arduino sans l'IDE
 pi@raspberrypi ~ $ sudo apt install arduino-mk
 ```
 
-On va ainsi crée un programme de base : 
+Créons un programme de base : 
 
 ```bash
 pi@raspberrypi ~ $ mkdir blink
@@ -103,7 +125,7 @@ pi@raspberrypi ~ $ cd blink
 pi@raspberrypi blink/~ $ vi blink.ino
 ```
 
-On va ajouter ce programme :
+Voici un bout de code :
 ```c++
 #include <Arduino.h>
 
@@ -119,7 +141,7 @@ void loop() {
 }
 ```
 
-On va maintenant crée un Makefile :
+Créons un Makefile :
 ```makefile
 include /usr/share/arduino/Arduino.mk
 MCU = atmega48
@@ -128,7 +150,7 @@ ARDUINO_DIR = /usr/share/arduino
 ARDUINO_LIBS =
 ```
 
-On compile :
+Compilons tout ceci :
 
 ```bash
 pi@raspberrypi blink/~ $ make
@@ -139,6 +161,7 @@ Un dossier `build-uno` est créé à la compilation et contient un fichier `.hex
 ```bash
 pi@raspberrypi blink/~ $ sudo avrdude -c linuxgpio -p atmega8 -v -U flash:w:build-uno/blink.hex:i
 ```
+> Note : Ajustez le type de puce, n'allez pas griller un aTmega pour rien...
 
 ## Ajout de librairies : 
 
@@ -156,11 +179,12 @@ ARDUINO_LIBS += Wire \
 ```
 Can't export GPIO 4, already exported/busy?: Device or resource busy
 ```
-### Fix : 
+Fix : 
 ```bash
 echo 4 > /sys/class/gpio/unexport 
 ```
 ## Exemple de fuse :
+Par défaut certaines puces n'ont pas les bons fuse en place. Ces fuses permettent de déffinir les paramètres des aTmega. Il est possible de les modifier. 
 
 > ATTENTION :
 Une mauvaise manipulation de ces fuse peu rendre inutilisables vos µcontrolleur 
@@ -177,6 +201,9 @@ sudo avrdude -c linuxgpio -p atmega48 -U lfuse:w:0xe2:m -U hfuse:w:0xdf:m -U efu
 sudo avrdude -c linuxgpio -p m8 -U lfuse:w:0xe4:m -U hfuse:w:0xd9:m 
 ```
 
+Utilisez ce site pour savoir quoi envoyer dans AVR dude : https://www.engbedded.com/fusecalc/
 
+> Internal crystal veut dire que l'aTmega utilise son oscillateur intégré pour fonctionner. Ce n'est pas aussi précis qu'un quartz mais cela permet d'utiliser ces puces sur une breadboard de façon minimaliste. 
 
+> Le blog de ladyada parle aussi de ces fameux fuses https://www.ladyada.net/learn/avr/fuses.html
 
