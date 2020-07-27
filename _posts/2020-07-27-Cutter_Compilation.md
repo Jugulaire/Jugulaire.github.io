@@ -3,7 +3,7 @@ layout: post
 title: Compiler Cutter depuis les sources
 ---
 
-![cutter.jpg]({{ site.baseurl }}/images/cutter.jpg){:class="img-responsive"}
+![cutter.jpg]({{ site.baseurl }}/images/brb-icon-7.jpg){:class="img-responsive"}
 
 Le but de ce billet est de donner une solution rapide pour compiler facilement Cutter sur Ubuntu 18.04. 
 
