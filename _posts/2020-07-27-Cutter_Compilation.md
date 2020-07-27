@@ -3,6 +3,8 @@ layout: post
 title: Compiler Cutter depuis les sources
 ---
 
+![cutter.jpg]({{ site.baseurl }}/images/cutter.jpg){:class="img-responsive"}
+
 Le but de ce billet est de donner une solution rapide pour compiler facilement Cutter sur Ubuntu 18.04. 
 
 La première étape est d'installer les dépendances :
