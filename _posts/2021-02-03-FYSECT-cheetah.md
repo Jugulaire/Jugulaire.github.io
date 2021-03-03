@@ -1,6 +1,9 @@
-# Compiler Marlin pour la FYSECT Cheetah 1.2b
+---
+layout: post
+title: Compiler Marlin pour la FYSECT Cheetah 1.2b
+---
 
-
+![]({{ site.baseurl }}/images/img/cheetah.png){:class="img-responsive"}
 
 Je suis heureux propriétaire d'une Ender3, c'est une machine solide qui sort des impressions vraiment propre sans faire de grosses modifications. Mais elle souffre d'un gros problème : elle fait beaucoup de bruit. 
 
@@ -107,7 +110,7 @@ lib_deps =
 
 Vous pouvez maintenant cliquer sur Build en bas de l'écran, le bouton prend la forme d'une coche blanche. 
 
-![platformio]({{ site.baseurl }}/images/img/platformio.jpg)
+![platformio]({{ site.baseurl }}/images/img/platformio.jpg){:class="img-responsive"}
 
 Si la compilation se déroule comme prévue, vous devez obtenir ceci :
 
@@ -237,13 +240,13 @@ Pour flasher notre carte sous Windows, utilisez flymcu disponible [ici](https://
 
 Ouvrez le en tant qu'administrateur avec un clic droit :
 
-![flymcu]({{ site.baseurl }}/images/img/flymcu.png)
+![flymcu]({{ site.baseurl }}/images/img/flymcu.png){:class="img-responsive"}
 
 Puis vérifiez que le paramétrage en bas de la fenêtre est bien identique a celui de ma capture avant de récupérer votre firmware et de cliquer sur `Start ISP(P)` :
 
 > Note : Le firmware se trouve dans le dossier `Marlin-2.0.x-FYSETC-CHEETAH-V12-2.0.x/.pio/build/firmware.bin` notez bien où vous l'avez mis !
 
-![flymcu2]({{ site.baseurl }}/images/img/flymcu2.png)
+![flymcu2]({{ site.baseurl }}/images/img/flymcu2.png){:class="img-responsive"}
 
 Une fois finis vous pouvez quitter le programme et vous amuser avec votre nouvelle carte. 
 
