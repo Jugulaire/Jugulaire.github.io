@@ -1,6 +1,6 @@
 ---
 layout: post
-title: iDRAC 6 : Accéder au KVM java 
+title: iDRAC 6 Accéder au KVM java 
 ---
 
 ![idrac-login-web.png]({{ site.baseurl }}/images/idrac-login-web.png){:class="img-responsive"}
