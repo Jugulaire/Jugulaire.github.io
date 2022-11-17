@@ -3,6 +3,8 @@ layout: post
 title: Pourquoi utiliser AWK ?  
 ---
 
+![awk]({{ site.baseurl }}/images/awk.png){:class="img-responsive"}
+
 J'ai longtemps été réticent vis a vis de l'apprentissage de AWK. 
 La syntaxe me semblait indigeste et puis il est possible de faire la même chose avec sed, grep, cut ou encore tr alors a quoi bon ? 
 
