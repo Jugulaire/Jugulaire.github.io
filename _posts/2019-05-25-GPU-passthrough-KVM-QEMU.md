@@ -220,7 +220,7 @@ Pour ma part, j'ai installé une VM avec les spécifications suivantes depuis vi
 - Réseau virtio 
 - Carte son AC 97 
 - Lecteur CD 1 Windows 10
-- Lecteur CD 2 Virtio.iso ([https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso](Dispo ici))
+- Lecteur CD 2 Virtio.iso [Dispo ici](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso)
 
 > Attention, ne pas déployer directement la carte graphique. 
 
