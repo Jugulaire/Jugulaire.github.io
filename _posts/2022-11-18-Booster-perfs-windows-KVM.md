@@ -3,7 +3,7 @@ layout: post
 title: Booster les performances de vos VM Windows sous KVM 
 ---
 
-![virtio]]({{ site.baseurl }}/images/kvm.jpg){:class="img-responsive"}
+![virtio]({{ site.baseurl }}/images/kvm.jpg){:class="img-responsive"}
 
 Lors de mes tests sous Windows, je monte souvent des environnements dédiés a l'aide de KVM. Seulement par défaut, KVM ne propose pas une configuration optimale (sans les drivers virtio) et donc la machine virtuelle est lente. 
 
