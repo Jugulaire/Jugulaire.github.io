@@ -19,23 +19,27 @@ Pour cette partie je vous laisse aller faire un tour sur le site https://platfor
 
 ## Télécharger les bonnes sources du firmware
 
-La documentation brouillon de l'éditeur fait mention du téléchargement des sources à compiler pour la carte mais elles ne fais pas franchement mention des diverses branches du repo github qui heberge les sources. 
-
-En fait ils donnent des liens qui pointent dans deux branches différentes. N'étant pas clairement expliqué j'ai cherché et découvert que le repo est découpé en branche correspondant chacune a une carte développé par l'entreprise. 
-
-Du coup il fait utiliser la branche  suivante :
+Ici je part sur le repo git officiel de Marlin : 
 
 ```bash
-https://github.com/FYSETC/Marlin-2.0.x-FYSETC/tree/CHEETAH/V12-2.0.x
-```
+git clone https://github.com/MarlinFirmware/Marlin
+``` 
 
-Pour ma part je clone directement 
+Une fois fait, il faut ajouter les fichiers de configuration trouvable ici : 
 
 ```bash
-git clone -b CHEETAH/V12-2.0.x https://github.com/FYSETC/Marlin-2.0.x-FYSETC.git
+https://github.com/MarlinFirmware/Configurations/tree/bugfix-2.1.x/config/examples/Creality/Ender-3/FYSETC%20Cheetah%201.2
 ```
+Copier les fichiers suivants dans le sous dossier `Marlin` : 
 
-Je vérifie avec `git branch -a` puis je vais modifier tout ce qui dois l'être. Débutons par le fichier `Marlin/Configuration_adv.h ` à la ligne **1978** : 
+- `_Bootscreen.h`
+- `_Statusscreen.h`
+- `Configuration.h`
+- `Configuration_adv.h`  
+
+
+
+Débutons par le fichier `Marlin/Configuration_adv.h ` à la ligne **1978** : 
 
 ```c
   /**
@@ -88,29 +92,11 @@ Si cela n'est pas configuré correctement vous obtiendrez `TMC CONNEXION ERROR` 
 
 > Note : Des génies vous diront de mettre les TMC en mode standalone ce qui est une mauvaise idée. Dans mon cas cette idée de génie s'est soldée par un layer shifting de l'espace et des stepper chaud comme une baraque a frite. 
 
-Maintenant nous allons retirer une des bibliothèques du fichier `platformio.ini` :
 
-```bash
-[common]
-default_src_filter = +<src/*> -<src/config> -<src/HAL> +<src/HAL/shared>
-extra_scripts = pre:buildroot/share/PlatformIO/scripts/common-cxxflags.py
-build_flags = -fmax-errors=5 -g -D__MARLIN_FIRMWARE__ -fmerge-all-constants
-lib_deps =
-  LiquidCrystal
-  TMCStepper@>=0.6.2,<1.0.0
-  Adafruit NeoPixel
-  U8glib-HAL=https://github.com/MarlinFirmware/U8glib-HAL/archive/bugfix.zip
-  #Adafruit_MAX31865=https://github.com/adafruit/Adafruit_MAX31865/archive/master.zip
-  LiquidTWI2=https://github.com/lincomatic/LiquidTWI2/archive/master.zip
-  Arduino-L6470=https://github.com/ameyer/Arduino-L6470/archive/0.8.0.zip
-  SailfishLCD=https://github.com/mikeshub/SailfishLCD/archive/master.zip
-  SailfishRGB_LED=https://github.com/mikeshub/SailfishRGB_LED/archive/master.zip
-  SlowSoftI2CMaster=https://github.com/mikeshub/SlowSoftI2CMaster/archive/master.zip
-```
 
-Vous pouvez maintenant cliquer sur Build en bas de l'écran, le bouton prend la forme d'une coche blanche. 
+Vous pouvez maintenant cliquer sur la tête de martien a gauche de l'écran chercher `STM32F103RC_fysetc_maple`. Attendez quelques secondes que l'option `Build` apparaisse et cliquer dessus.
 
-![platformio]({{ site.baseurl }}/images/img/platformio.jpg){:class="img-responsive"}
+![platformio]({{ site.baseurl }}/images/Build_marlin.png){:class="img-responsive"}
 
 Si la compilation se déroule comme prévue, vous devez obtenir ceci :
 
@@ -184,10 +170,10 @@ install -m 644 stm32flash.1 /usr/local/share/man/man1
 
 Nous allons pouvoir flasher notre carte : 
 
-> Note : Le firmware se trouve dans le dossier `Marlin-2.0.x-FYSETC-CHEETAH-V12-2.0.x/.pio/build/firmware.bin` notez bien où vous l'avez mis !
+> Note : Le firmware se trouve dans le dossier `Marlin-bugfix-2.1.x/Marlin-bugfix-2.1.x/.pio\build/STM32F103RC_fysetc_maple/firmware.bin` notez bien où vous l'avez mis !
 
 ```bash
-cp /home/jugu/Marlin-2.0.x-FYSETC-CHEETAH-V12-2.0.x/.pio/build/firmware.bin ./
+cp Marlin-bugfix-2.1.x/Marlin-bugfix-2.1.x/.pio\build/STM32F103RC_fysetc_maple/firmware.bin ./
 sudo stm32flash -w firmware.bin -v -i rts,dtr /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0 
 stm32flash 0.5
 
@@ -225,12 +211,13 @@ Pour modifier le firmware nous allons dé-commenter quelques lignes dans `config
 
 ```bash
 #define MESH_BED_LEVELING
-#define GRID_MAX_POINTS_X 4 
+#define GRID_MAX_POINTS_X 5 
 #define LCD_BED_LEVELING
 #define EEPROM_SETTINGS
+#define MESH_INSET 50
 ```
 
-Faites une recherche dans le fichier, par défaut `GRID_MAX_POINTS_X` est définis à 3 pour faire 9 points de mesures. Mais je préfère en faire 16. 
+Faites une recherche dans le fichier, par défaut `GRID_MAX_POINTS_X` est définis à 3 pour faire 9 points de mesures. Mais je préfère en faire 25. 
 
 Ensuite, même schéma qu'avant, cliquer sur build et attendre la compilation du firmware. Nous allons maintenant procéder comme avant pour téléverser le firmware. 
 
@@ -244,7 +231,7 @@ Ouvrez le en tant qu'administrateur avec un clic droit :
 
 Puis vérifiez que le paramétrage en bas de la fenêtre est bien identique a celui de ma capture avant de récupérer votre firmware et de cliquer sur `Start ISP(P)` :
 
-> Note : Le firmware se trouve dans le dossier `Marlin-2.0.x-FYSETC-CHEETAH-V12-2.0.x/.pio/build/firmware.bin` notez bien où vous l'avez mis !
+> Note : Le firmware se trouve dans le dossier `Marlin-bugfix-2.1.x\Marlin-bugfix-2.1.x\.pio\build\STM32F103RC_fysetc_maple\firmware.bin` notez bien où vous l'avez mis !
 
 ![flymcu2]({{ site.baseurl }}/images/img/flymcu2.png){:class="img-responsive"}
 
