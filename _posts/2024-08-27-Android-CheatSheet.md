@@ -5,9 +5,6 @@ title: Cheat Sheet Android
 
 ![]({{ site.baseurl }}/images/android-logo.png){:class="img-responsive"}
 
-# Android Pentest 
-
-
 
 ## Port forwarding 
 
