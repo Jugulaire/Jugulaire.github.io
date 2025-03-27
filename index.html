@@ -1,13 +1,13 @@
 ---
 layout: default
 ---
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="module"> 
-    import mermaid from "https://unpkg.com/mermaid@11.6.0/dist/mermaid.min.js";
-       mermaid.initialize({
-               theme: 'dark'
-           });
-    </script>
+  import * as mermaid from "https://unpkg.com/mermaid@11.6.0/dist/mermaid.min.mjs";
+     mermaid.initialize({
+             theme: 'dark'
+         });
+  </script>
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
